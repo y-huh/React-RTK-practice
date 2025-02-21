@@ -1,0 +1,212 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "carName": "Zeekr 001",
+            "carPrice": "62000$",
+            "carYear": "2023",
+            "region": "CHINA",
+            "status": "new"
+        },
+        {
+            "id": 2,
+            "carName": "Tesla Model S",
+            "carPrice": "85000$",
+            "carYear": "2024",
+            "region": "USA",
+            "status": "new"
+        },
+        {
+            "id": 3,
+            "carName": "BMW iX",
+            "carPrice": "90000$",
+            "carYear": "2023",
+            "region": "GERMANY",
+            "status": "new"
+        },
+        {
+            "id": 4,
+            "carName": "Mercedes EQS",
+            "carPrice": "102000$",
+            "carYear": "2024",
+            "region": "GERMANY",
+            "status": "new"
+        },
+        {
+            "id": 5,
+            "carName": "Audi e-tron GT",
+            "carPrice": "100000$",
+            "carYear": "2023",
+            "region": "GERMANY",
+            "status": "new"
+        },
+        {
+            "id": 6,
+            "carName": "Lucid Air",
+            "carPrice": "120000$",
+            "carYear": "2024",
+            "region": "USA",
+            "status": "new"
+        },
+        {
+            "id": 7,
+            "carName": "Rivian R1T",
+            "carPrice": "75000$",
+            "carYear": "2023",
+            "region": "USA",
+            "status": "new"
+        },
+        {
+            "id": 8,
+            "carName": "Ford Mustang Mach-E",
+            "carPrice": "60000$",
+            "carYear": "2023",
+            "region": "USA",
+            "status": "new"
+        },
+        {
+            "id": 9,
+            "carName": "Hyundai Ioniq 5",
+            "carPrice": "50000$",
+            "carYear": "2023",
+            "region": "SOUTH KOREA",
+            "status": "new"
+        },
+        {
+            "id": 10,
+            "carName": "Kia EV6",
+            "carPrice": "55000$",
+            "carYear": "2023",
+            "region": "SOUTH KOREA",
+            "status": "new"
+        },
+        {
+            "id": 11,
+            "carName": "Nissan Ariya",
+            "carPrice": "47000$",
+            "carYear": "2023",
+            "region": "JAPAN",
+            "status": "new"
+        },
+        {
+            "id": 12,
+            "carName": "Toyota bZ4X",
+            "carPrice": "42000$",
+            "carYear": "2023",
+            "region": "JAPAN",
+            "status": "new"
+        },
+        {
+            "id": 13,
+            "carName": "Honda e",
+            "carPrice": "39000$",
+            "carYear": "2022",
+            "region": "JAPAN",
+            "status": "new"
+        },
+        {
+            "id": 14,
+            "carName": "Porsche Taycan",
+            "carPrice": "110000$",
+            "carYear": "2024",
+            "region": "GERMANY",
+            "status": "new"
+        },
+        {
+            "id": 15,
+            "carName": "Chevrolet Bolt EV",
+            "carPrice": "37000$",
+            "carYear": "2023",
+            "region": "USA",
+            "status": "new"
+        },
+        {
+            "id": 16,
+            "carName": "Volkswagen ID.4",
+            "carPrice": "46000$",
+            "carYear": "2023",
+            "region": "GERMANY",
+            "status": "new"
+        },
+        {
+            "id": 17,
+            "carName": "Polestar 2",
+            "carPrice": "55000$",
+            "carYear": "2023",
+            "region": "SWEDEN",
+            "status": "new"
+        },
+        {
+            "id": 18,
+            "carName": "Fiat 500e",
+            "carPrice": "32000$",
+            "carYear": "2023",
+            "region": "ITALY",
+            "status": "new"
+        },
+        {
+            "id": 19,
+            "carName": "Jaguar I-PACE",
+            "carPrice": "72000$",
+            "carYear": "2023",
+            "region": "UK",
+            "status": "new"
+        },
+        {
+            "id": 20,
+            "carName": "BYD Han EV",
+            "carPrice": "45000$",
+            "carYear": "2023",
+            "region": "CHINA",
+            "status": "new"
+        },
+        {
+            "id": 21,
+            "carName": "XPeng P7",
+            "carPrice": "47000$",
+            "carYear": "2023",
+            "region": "CHINA",
+            "status": "new"
+        },
+        {
+            "id": 22,
+            "carName": "NIO ET7",
+            "carPrice": "78000$",
+            "carYear": "2024",
+            "region": "CHINA",
+            "status": "new"
+        },
+        {
+            "id": 23,
+            "carName": "Mazda MX-30",
+            "carPrice": "34000$",
+            "carYear": "2023",
+            "region": "JAPAN",
+            "status": "new"
+        },
+        {
+            "id": 24,
+            "carName": "Renault Megane E-Tech",
+            "carPrice": "42000$",
+            "carYear": "2023",
+            "region": "FRANCE",
+            "status": "new"
+        },
+        {
+            "id": 25,
+            "carName": "Peugeot e-208",
+            "carPrice": "38000$",
+            "carYear": "2023",
+            "region": "FRANCE",
+            "status": "new"
+        },
+        {
+            "id": 26,
+            "carName": "Skoda Enyaq iV",
+            "carPrice": "48000$",
+            "carYear": "2023",
+            "region": "CZECH REPUBLIC",
+            "status": "new"
+        }
+    ]
+}
