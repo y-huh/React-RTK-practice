@@ -1,3 +1,4 @@
+
 import { useEffect } from "react"
 import { Form, Input, Button, Select, Modal } from "antd"
 import React from "react"
@@ -40,35 +41,38 @@ const CarForm = ({ visible, onCancel, onSubmit, initialValues = {}, isEditing = 
       ]}
     >
       <Form form={form} layout="vertical" name="carForm" initialValues={initialValues}>
-        <Form.Item name="title" label="Car Name" rules={[{ required: true, message: "Please enter car name!" }]}>
+        <Form.Item name="carName" label="Car Name" rules={[{ required: true, message: "Please enter car name!" }]}>
           <Input />
         </Form.Item>
 
-        <Form.Item name="price" label="Price" rules={[{ required: true, message: "Please enter price!" }]}>
-          <Input type="number" />
+        <Form.Item name="carPrice" label="Price" rules={[{ required: true, message: "Please enter price!" }]}>
+          <Input />
         </Form.Item>
 
-        <Form.Item
-          name="description"
-          label="Description"
-          rules={[{ required: true, message: "Please enter description!" }]}
-        >
-          <Input.TextArea rows={4} />
+        <Form.Item name="carYear" label="Year" rules={[{ required: true, message: "Please enter year!" }]}>
+          <Input />
         </Form.Item>
 
-        <Form.Item name="category" label="Category" rules={[{ required: true, message: "Please select category!" }]}>
+        <Form.Item name="region" label="Region" rules={[{ required: true, message: "Please select region!" }]}>
           <Select>
-            <Select.Option value="smartphones">Smartphones</Select.Option>
-            <Select.Option value="laptops">Laptops</Select.Option>
-            <Select.Option value="fragrances">Fragrances</Select.Option>
-            <Select.Option value="skincare">Skincare</Select.Option>
-            <Select.Option value="groceries">Groceries</Select.Option>
-            <Select.Option value="home-decoration">Home Decoration</Select.Option>
+            <Select.Option value="USA">USA</Select.Option>
+            <Select.Option value="GERMANY">Germany</Select.Option>
+            <Select.Option value="JAPAN">Japan</Select.Option>
+            <Select.Option value="CHINA">China</Select.Option>
+            <Select.Option value="SOUTH KOREA">South Korea</Select.Option>
+            <Select.Option value="UK">UK</Select.Option>
+            <Select.Option value="FRANCE">France</Select.Option>
+            <Select.Option value="ITALY">Italy</Select.Option>
+            <Select.Option value="SWEDEN">Sweden</Select.Option>
+            <Select.Option value="CZECH REPUBLIC">Czech Republic</Select.Option>
           </Select>
         </Form.Item>
 
-        <Form.Item name="brand" label="Brand" rules={[{ required: true, message: "Please enter brand!" }]}>
-          <Input />
+        <Form.Item name="status" label="Status" rules={[{ required: true, message: "Please select status!" }]}>
+          <Select>
+            <Select.Option value="new">New</Select.Option>
+            <Select.Option value="used">Used</Select.Option>
+          </Select>
         </Form.Item>
       </Form>
     </Modal>

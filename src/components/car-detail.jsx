@@ -1,7 +1,6 @@
 import { useGetCarQuery } from "../store/carsApi"
-import { Card, Descriptions, Spin, Image, Button } from "antd"
+import { Card, Descriptions, Spin, Button, Tag } from "antd"
 import { ArrowLeftOutlined } from "@ant-design/icons"
-import React from "react"
 
 const CarDetail = ({ id, onBack }) => {
   const { data: car, isLoading, error } = useGetCarQuery(id)
@@ -29,45 +28,25 @@ const CarDetail = ({ id, onBack }) => {
       </Button>
 
       <Card className="w-full max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <Image
-              src={car.images?.[0] || "/placeholder.svg"}
-              alt={car.title}
-              className="w-full rounded-lg"
-              fallback="/placeholder.svg?height=300&width=400"
-            />
-            <div className="mt-4 grid grid-cols-3 gap-2">
-              {car.images?.slice(1, 4).map((img, index) => (
-                <Image
-                  key={index}
-                  src={img || "/placeholder.svg"}
-                  alt={`${car.title} - ${index + 1}`}
-                  className="w-full h-20 object-cover rounded"
-                  fallback="/placeholder.svg?height=80&width=80"
-                />
-              ))}
-            </div>
-          </div>
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold mb-2">{car.carName}</h1>
+          <div className="text-2xl text-green-600 font-bold mb-4">{car.carPrice}</div>
 
-          <div>
-            <h1 className="text-2xl font-bold mb-2">{car.title}</h1>
-            <div className="text-2xl text-green-600 font-bold mb-4">${car.price}</div>
-
-            <Descriptions bordered column={1} size="small">
-              <Descriptions.Item label="Brand">{car.brand}</Descriptions.Item>
-              <Descriptions.Item label="Category">{car.category}</Descriptions.Item>
-              <Descriptions.Item label="Rating">{car.rating} ⭐</Descriptions.Item>
-              <Descriptions.Item label="Stock">{car.stock} units</Descriptions.Item>
-              <Descriptions.Item label="Discount">{car.discountPercentage}%</Descriptions.Item>
-            </Descriptions>
-
-            <div className="mt-4">
-              <h3 className="font-semibold mb-2">Description:</h3>
-              <p className="text-gray-700">{car.description}</p>
-            </div>
+          <div className="flex justify-center gap-2 mb-4">
+            <Tag color="blue">{car.region}</Tag>
+            <Tag color="green">{car.status}</Tag>
+            <Tag color="orange">{car.carYear}</Tag>
           </div>
         </div>
+
+        <Descriptions bordered column={1} size="large">
+          <Descriptions.Item label="Car Name">{car.carName}</Descriptions.Item>
+          <Descriptions.Item label="Price">{car.carPrice}</Descriptions.Item>
+          <Descriptions.Item label="Year">{car.carYear}</Descriptions.Item>
+          <Descriptions.Item label="Region">{car.region}</Descriptions.Item>
+          <Descriptions.Item label="Status">{car.status}</Descriptions.Item>
+          <Descriptions.Item label="Liked">{car.isLiked ? "Yes" : "No"}</Descriptions.Item>
+        </Descriptions>
       </Card>
     </div>
   )

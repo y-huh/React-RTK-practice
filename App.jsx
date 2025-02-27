@@ -1,17 +1,25 @@
-import React from "react"
+
 import "./App.css"
-import { useState } from "react"
-import { useGetAllCarsQuery, useAddCarMutation, useUpdateCarMutation, useDeleteCarMutation } from "./src/store/carsApi"
-import { Button, Card, Modal, message } from "antd"
-import { EditOutlined, DeleteOutlined, PlusOutlined, EyeOutlined } from "@ant-design/icons"
+
+import React, { useState } from "react"
+import {
+  useGetAllCarsQuery,
+  useAddCarMutation,
+  useUpdateCarMutation,
+  useDeleteCarMutation,
+  useToggleLikeMutation,
+} from "./src/store/carsApi"
+import { Button, Card, Modal, message, Tag } from "antd"
+import { EditOutlined, DeleteOutlined, PlusOutlined, EyeOutlined, HeartOutlined, HeartFilled } from "@ant-design/icons"
 import CarForm from "./src/components/car-form"
 import CarDetail from "./src/components/car-detail"
 
 function App() {
-  const { data, isLoading, error } = useGetAllCarsQuery()
+  const { data: cars = [], isLoading, error } = useGetAllCarsQuery()
   const [addCar] = useAddCarMutation()
   const [updateCar] = useUpdateCarMutation()
   const [deleteCar] = useDeleteCarMutation()
+  const [toggleLike] = useToggleLikeMutation()
 
   const [isAddModalVisible, setIsAddModalVisible] = useState(false)
   const [isEditModalVisible, setIsEditModalVisible] = useState(false)
@@ -26,8 +34,6 @@ function App() {
     return <h1 className="font-bold text-center mt-10">Error: {error.message}</h1>
   }
 
-  const cars = data?.products || []
-
   const showAddModal = () => {
     setIsAddModalVisible(true)
   }
@@ -39,7 +45,13 @@ function App() {
 
   const handleAddCar = async (values) => {
     try {
-      await addCar(values).unwrap()
+      // Set default values for new car
+      const newCar = {
+        ...values,
+        isLiked: false,
+      }
+
+      await addCar(newCar).unwrap()
       setIsAddModalVisible(false)
       message.success("Car added successfully!")
     } catch (err) {
@@ -49,7 +61,11 @@ function App() {
 
   const handleUpdateCar = async (values) => {
     try {
-      await updateCar({ id: currentCar.id, ...values }).unwrap()
+      await updateCar({
+        id: currentCar.id,
+        ...values,
+        isLiked: currentCar.isLiked, // Preserve the liked status
+      }).unwrap()
       setIsEditModalVisible(false)
       message.success("Car updated successfully!")
     } catch (err) {
@@ -73,6 +89,14 @@ function App() {
         }
       },
     })
+  }
+
+  const handleToggleLike = async (id, isLiked) => {
+    try {
+      await toggleLike({ id, isLiked: !isLiked }).unwrap()
+    } catch (err) {
+      message.error("Failed to update like status: " + err.message)
+    }
   }
 
   const viewCarDetail = (id) => {
@@ -103,30 +127,39 @@ function App() {
           padding: 0,
         }}
       >
-        {cars.map((item) => (
-          <li key={item.id}>
+        {cars.map((car) => (
+          <li key={car.id}>
             <Card
               hoverable
               style={{ width: 240 }}
               cover={
-                <img className="!h-[200px] object-cover" alt="product" src={item.images?.[0] || "/placeholder.svg"} />
+                <div className="h-[150px] bg-gray-200 flex items-center justify-center">
+                  <span className="text-2xl font-bold">{car.carName.substring(0, 1)}</span>
+                </div>
               }
               actions={[
-                <EyeOutlined key="view" onClick={() => viewCarDetail(item.id)} />,
-                <EditOutlined key="edit" onClick={() => showEditModal(item)} />,
-                <DeleteOutlined key="delete" onClick={() => handleDeleteCar(item.id)} />,
+                car.isLiked ? (
+                  <HeartFilled
+                    key="like"
+                    style={{ color: "red" }}
+                    onClick={() => handleToggleLike(car.id, car.isLiked)}
+                  />
+                ) : (
+                  <HeartOutlined key="like" onClick={() => handleToggleLike(car.id, car.isLiked)} />
+                ),
+                <EyeOutlined key="view" onClick={() => viewCarDetail(car.id)} />,
+                <EditOutlined key="edit" onClick={() => showEditModal(car)} />,
+                <DeleteOutlined key="delete" onClick={() => handleDeleteCar(car.id)} />,
               ]}
             >
               <div>
-                <h4 className="line-clamp-1 font-bold">{item.title}</h4>
-                <p className="text-lg font-semibold text-green-600">${item.price}</p>
-                <p className="line-clamp-2 text-gray-500">{item.description}</p>
-                <p className="mt-2">
-                  <span className="font-medium">Brand:</span> {item.brand}
-                </p>
-                <p>
-                  <span className="font-medium">Category:</span> {item.category}
-                </p>
+                <h4 className="line-clamp-1 font-bold">{car.carName}</h4>
+                <p className="text-lg font-semibold text-green-600">{car.carPrice}</p>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  <Tag color="blue">{car.region}</Tag>
+                  <Tag color="green">{car.status}</Tag>
+                  <Tag color="orange">{car.carYear}</Tag>
+                </div>
               </div>
             </Card>
           </li>
