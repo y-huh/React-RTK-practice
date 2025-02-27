@@ -6,7 +6,8 @@
             "carPrice": "62000$",
             "carYear": "2023",
             "region": "CHINA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "carPrice": "85000$",
             "carYear": "2024",
             "region": "USA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 3,
@@ -22,7 +24,8 @@
             "carPrice": "90000$",
             "carYear": "2023",
             "region": "GERMANY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 4,
@@ -30,7 +33,8 @@
             "carPrice": "102000$",
             "carYear": "2024",
             "region": "GERMANY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 5,
@@ -38,7 +42,8 @@
             "carPrice": "100000$",
             "carYear": "2023",
             "region": "GERMANY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 6,
@@ -46,7 +51,8 @@
             "carPrice": "120000$",
             "carYear": "2024",
             "region": "USA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 7,
@@ -54,7 +60,8 @@
             "carPrice": "75000$",
             "carYear": "2023",
             "region": "USA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 8,
@@ -62,7 +69,8 @@
             "carPrice": "60000$",
             "carYear": "2023",
             "region": "USA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 9,
@@ -70,7 +78,8 @@
             "carPrice": "50000$",
             "carYear": "2023",
             "region": "SOUTH KOREA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 10,
@@ -78,7 +87,8 @@
             "carPrice": "55000$",
             "carYear": "2023",
             "region": "SOUTH KOREA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 11,
@@ -86,7 +96,8 @@
             "carPrice": "47000$",
             "carYear": "2023",
             "region": "JAPAN",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 12,
@@ -94,7 +105,8 @@
             "carPrice": "42000$",
             "carYear": "2023",
             "region": "JAPAN",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 13,
@@ -102,7 +114,8 @@
             "carPrice": "39000$",
             "carYear": "2022",
             "region": "JAPAN",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 14,
@@ -110,7 +123,8 @@
             "carPrice": "110000$",
             "carYear": "2024",
             "region": "GERMANY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 15,
@@ -118,7 +132,8 @@
             "carPrice": "37000$",
             "carYear": "2023",
             "region": "USA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 16,
@@ -126,7 +141,8 @@
             "carPrice": "46000$",
             "carYear": "2023",
             "region": "GERMANY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 17,
@@ -134,7 +150,8 @@
             "carPrice": "55000$",
             "carYear": "2023",
             "region": "SWEDEN",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 18,
@@ -142,7 +159,8 @@
             "carPrice": "32000$",
             "carYear": "2023",
             "region": "ITALY",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 19,
@@ -150,7 +168,8 @@
             "carPrice": "72000$",
             "carYear": "2023",
             "region": "UK",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 20,
@@ -158,7 +177,8 @@
             "carPrice": "45000$",
             "carYear": "2023",
             "region": "CHINA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 21,
@@ -166,7 +186,8 @@
             "carPrice": "47000$",
             "carYear": "2023",
             "region": "CHINA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 22,
@@ -174,7 +195,8 @@
             "carPrice": "78000$",
             "carYear": "2024",
             "region": "CHINA",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 23,
@@ -182,7 +204,8 @@
             "carPrice": "34000$",
             "carYear": "2023",
             "region": "JAPAN",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 24,
@@ -190,7 +213,8 @@
             "carPrice": "42000$",
             "carYear": "2023",
             "region": "FRANCE",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 25,
@@ -198,7 +222,8 @@
             "carPrice": "38000$",
             "carYear": "2023",
             "region": "FRANCE",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         },
         {
             "id": 26,
@@ -206,7 +231,8 @@
             "carPrice": "48000$",
             "carYear": "2023",
             "region": "CZECH REPUBLIC",
-            "status": "new"
+            "status": "new",
+            "isLiked":false
         }
     ]
 }
